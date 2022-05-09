@@ -1,4 +1,4 @@
-package Ej2;
+package com.java.selenium.ej2;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +23,6 @@ public class ChangeCompany {
 		driver.get("https://computer-database.gatling.io/computers"); // open the page
 		driver.findElement(By.xpath("//input[@id='searchbox']")).sendKeys("ASCI Thors Hammer"); //Fill the pc name in the searchbox
 		driver.findElement(By.xpath("//input[@id='searchsubmit']")).click(); //click search button
-		
 		driver.findElement(By.xpath("//a[@href=\"/computers/383\"]")).click(); // click the option we get
 		
 		//////////////////////////Drop down//////////////////////////////////////
