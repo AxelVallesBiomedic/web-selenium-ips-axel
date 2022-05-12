@@ -12,8 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class AddPc {
   @Test
   public void f() {
-	  
-	  
+	    
 	  String pc = "AxelPC";
 	  //Linear scripting
 	  ChromeOptions chromeOpt = new ChromeOptions();
@@ -40,5 +39,7 @@ public class AddPc {
 		String valMessage = driver.findElement(By.xpath("//div[@class=\"alert-message warning\"]")).getText(); //Get the warning message into a string
 		System.out.println(valMessage); // PRint the message in the console				
 		Assert.assertEquals(valMessage, "Done ! Computer AxelPC has been created"); //Compare warning message with what it should show
+		
+		driver.close();
   }
 }
